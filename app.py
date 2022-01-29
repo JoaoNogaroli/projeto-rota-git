@@ -11,6 +11,8 @@ import json
 import time
 
 app = Flask(__name__)
+session.permanent = True
+
 
 API_KEY = 'AIzaSyDviKMu_KGmMJqsMKrioJUZ3jIjpVr9Q5M'
 map_client = googlemaps.Client(API_KEY)
