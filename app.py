@@ -488,17 +488,6 @@ def quinta_opcao_dados():
         'lista': list(lista_primeiraopcao_endereco)
     }
     #print(session['lista_primeiraopcao_endereco'])
-    ##--------------
-    ### fotos
-    lista_primeiraopcao_fotos = df['photos'].values
-    lista_primeiraopcao_fotos_json_dumps=json.dumps(list(lista_primeiraopcao_fotos))
-    lista_primeiraopcao_fotos_json_loads = json.loads(lista_primeiraopcao_fotos_json_dumps)
-    lista_primeiraopcao_fotos= []
-    for item in lista_primeiraopcao_fotos_json_loads:
-        lista_primeiraopcao_fotos.append(item)
-    dic_primeiraopcao_fotos= {
-        'lista':list(lista_primeiraopcao_fotos)
-    }
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
     ### rating
@@ -513,15 +502,31 @@ def quinta_opcao_dados():
     #session['lista_primeiraopcao_endereco'] = dicio_lista_primeiraopcao_endereco
     #session['lista_primeiraopcao_fotos'] = dic_primeiraopcao_fotos
     #session['lista_primeiraopcao_rating'] = dicio_lista_primeiraopcao_rating
-    final_primeiraopcao_fotos_dois = []
-    # print(dic_primeiraopcao_fotos['lista'])
-    # print('-------')
-    for item in dic_primeiraopcao_fotos['lista']:
-        if item == '...':
-            src = 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png'
-        else:
-            src = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference='+item[0]['photo_reference']+'&key='+API_KEY
-        final_primeiraopcao_fotos_dois.append(src) 
+    ##--------------
+    ### fotos
+    try:
+        lista_primeiraopcao_fotos = df['photos'].values
+        lista_primeiraopcao_fotos_json_dumps=json.dumps(list(lista_primeiraopcao_fotos))
+        lista_primeiraopcao_fotos_json_loads = json.loads(lista_primeiraopcao_fotos_json_dumps)
+        lista_primeiraopcao_fotos= []
+        for item in lista_primeiraopcao_fotos_json_loads:
+            lista_primeiraopcao_fotos.append(item)
+        dic_primeiraopcao_fotos= {
+            'lista':list(lista_primeiraopcao_fotos)
+        }
+        final_primeiraopcao_fotos_dois = []
+        # print(dic_primeiraopcao_fotos['lista'])
+        # print('-------')
+        for item in dic_primeiraopcao_fotos['lista']:
+            if item == '...':
+                src = 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png'
+            else:
+                src = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference='+item[0]['photo_reference']+'&key='+API_KEY
+            final_primeiraopcao_fotos_dois.append(src) 
+    except Exception as e:
+        final_primeiraopcao_fotos_dois = []
+        src = 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png'
+        final_primeiraopcao_fotos_dois.append(src)
     lista_total = {
     'lista_primeiraopcao_nome':lista_final_nomes,
     'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
