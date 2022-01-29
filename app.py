@@ -2,6 +2,7 @@ from ast import keyword
 from re import search
 from shutil import ExecError
 from time import time
+from unittest import expectedFailure
 from flask import Flask, make_response,redirect, render_template, request, url_for, session,jsonify
 import secrets
 import googlemaps
@@ -176,7 +177,10 @@ def segunda_opcao_dados():
         radius=distance,
     )
     df = pd.DataFrame(response_['results'])
-    df['photos'].fillna('...', inplace=True)
+    try:
+        df['photos'].fillna('...', inplace=True)
+    except:
+        pass
     #df.to_excel('lista.xlsx')
     ##--------------
     ### NOME
@@ -272,7 +276,10 @@ def terceira_opcao_dados():
         radius=distance,
     )
     df = pd.DataFrame(response_['results'])
-    df['photos'].fillna('...', inplace=True)
+    try:
+        df['photos'].fillna('...', inplace=True)
+    except:
+        pass
     #df.to_excel('lista.xlsx')
     ##--------------
     ### NOME
@@ -366,7 +373,10 @@ def quarta_opcao_dados():
         radius=distance,
     )
     df = pd.DataFrame(response_['results'])
-    df['photos'].fillna('...', inplace=True)
+    try:
+        df['photos'].fillna('...', inplace=True)
+    except:
+        pass
     #df.to_excel('lista.xlsx')
     ##--------------
     ### NOME
@@ -461,7 +471,10 @@ def quinta_opcao_dados():
         radius=distance,
     )
     df = pd.DataFrame(response_['results'])
-    df['photos'].fillna('...', inplace=True)
+    try:
+        df['photos'].fillna('...', inplace=True)
+    except:
+        pass
     #df.to_excel('lista.xlsx')
     ##--------------
     ### NOME
