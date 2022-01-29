@@ -541,8 +541,9 @@ def quinta_opcao_dados():
 
 
 
-@app.route('/pagina_dados')
+@app.route('/pagina_dados', methods=['GET',['POST']])
 def pagina_dados():
+    time.sleep(1.4)
     primeira = session['escolha']['dado_um']
     segunda = session['escolha']['dado_2']
     terceira = session['escolha']['dado_3']
@@ -555,7 +556,7 @@ def pagina_dados():
     lista_escolhas.append(quarta)
     lista_escolhas.append(quinta)
     lista_primeira_opcao = primeira_opcaao_dados()
-    time.sleep(0.1)
+    time.sleep(0.4)
     lista_segunda_opcao = segunda_opcao_dados()  
     lista_terceira_opcao = terceira_opcao_dados()  
     lista_quarta_opcao = quarta_opcao_dados()  
