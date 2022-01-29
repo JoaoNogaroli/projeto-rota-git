@@ -10,7 +10,7 @@ import pandas as pd
 import openpyxl
 import json
 import time
-
+import os
 app = Flask(__name__)
 
 
@@ -26,6 +26,9 @@ global search_string
 
 @app.route("/")
 def index():
+    app.secret_key = os.urandom(32)
+    session.pop('escolha',None)
+    
     return render_template('index.html')
 
 @app.route('/teste', methods=["GET","POST"])
