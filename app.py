@@ -78,7 +78,10 @@ def primeira_opcaao_dados():
         radius=distance,
     )
     df = pd.DataFrame(response_['results'])
-    df['photos'].fillna('...', inplace=True)
+    try:
+        df['photos'].fillna('...', inplace=True)
+    except:
+        pass
     #df.to_excel('lista.xlsx')
     ##--------------
     ### NOME
