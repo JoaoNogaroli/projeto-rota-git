@@ -70,7 +70,7 @@ def primeira_opcaao_dados():
     location = (lat, lng)        
     search_string = escolha['dado_um']
     print("SEARCH STRING>>>_____----, "+search_string)        
-    distance = 50 #Aqui tem que dar algum jeito do usuario escolher a distância
+    distance = 500 #Aqui tem que dar algum jeito do usuario escolher a distância
     response_ = map_client.places_nearby(
         location=location,
         keyword=search_string,
@@ -159,7 +159,7 @@ def segunda_opcao_dados():
     location = (lat, lng)        
     search_string = escolha['dado_2']  
     print("SEARCH STRING>>>_____----, "+search_string)      
-    distance = 50 #Aqui tem que dar algum jeito do usuario escolher a distância
+    distance = 500 #Aqui tem que dar algum jeito do usuario escolher a distância
     response_ = map_client.places_nearby(
         location=location,
         keyword=search_string,
@@ -248,7 +248,7 @@ def terceira_opcao_dados():
     location = (lat, lng)        
     search_string = escolha['dado_3']     
     print("SEARCH STRING>>>_____----, "+search_string)   
-    distance = 50 #Aqui tem que dar algum jeito do usuario escolher a distância
+    distance = 500 #Aqui tem que dar algum jeito do usuario escolher a distância
     response_ = map_client.places_nearby(
         location=location,
         keyword=search_string,
@@ -337,7 +337,7 @@ def quarta_opcao_dados():
     location = (lat, lng)        
     search_string = escolha['dado_4']    
     print("SEARCH STRING>>>_____----, "+search_string)    
-    distance = 50 #Aqui tem que dar algum jeito do usuario escolher a distância
+    distance = 500 #Aqui tem que dar algum jeito do usuario escolher a distância
     response_ = map_client.places_nearby(
         location=location,
         keyword=search_string,
@@ -426,7 +426,7 @@ def quinta_opcao_dados():
     location = (lat, lng)        
     search_string = escolha['dado_5']    
     print("SEARCH STRING>>>_____----, "+search_string)    
-    distance = 50 #Aqui tem que dar algum jeito do usuario escolher a distância
+    distance = 500 #Aqui tem que dar algum jeito do usuario escolher a distância
     response_ = map_client.places_nearby(
         location=location,
         keyword=search_string,
