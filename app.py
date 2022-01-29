@@ -541,7 +541,7 @@ def quinta_opcao_dados():
 
 
 
-@app.route('/pagina_dados', methods=['GET',['POST']])
+@app.route('/pagina_dados', methods=['GET','POST'])
 def pagina_dados():
     time.sleep(1.4)
     primeira = session['escolha']['dado_um']
