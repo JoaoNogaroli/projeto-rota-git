@@ -26,6 +26,8 @@ global search_string
 
 @app.route("/")
 def index():
+    session.pop('escolha',None)
+
     # app.secret_key = os.urandom(32)
     # session.pop('escolha',None)
     
@@ -688,7 +690,6 @@ def pagina_dados():
     time.sleep(0.1)
     lista_quinta_opcao = quinta_opcao_dados(escolha)  
 
-    session.pop('escolha',None)
 
      
     return render_template('pagina_dados.html',lista_primeira_opcao=lista_primeira_opcao,lista_segunda_opcao=lista_segunda_opcao,lista_terceira_opcao=lista_terceira_opcao,lista_quarta_opcao=lista_quarta_opcao,lista_quinta_opcao=lista_quinta_opcao, len=len)
