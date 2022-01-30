@@ -90,11 +90,17 @@ def primeira_opcaao_dados():
     ##--------------
     ### NOME
     lista_geral = []
-    lista_geral.append(df['name'].values)
-    lista_nova = lista_geral[0]
-    lista_final_nomes = {
-        'lista':list(lista_nova)
-    }
+    try:
+        lista_geral.append(df['name'].values)
+        lista_nova = lista_geral[0]
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
+    except:
+        lista_nova = ['---']
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
     ##--------------
     ### location
     lista_primeiraopcao_location = df['geometry'].values
@@ -188,11 +194,17 @@ def segunda_opcao_dados():
     ##--------------
     ### NOME
     lista_geral = []
-    lista_geral.append(df['name'].values)
-    lista_nova = lista_geral[0]
-    lista_final_nomes = {
-        'lista':list(lista_nova)
-    }
+    try:
+        lista_geral.append(df['name'].values)
+        lista_nova = lista_geral[0]
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
+    except:
+        lista_nova = ['---']
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
     ##--------------
     ### location
     lista_primeiraopcao_location = df['geometry'].values
@@ -287,11 +299,17 @@ def terceira_opcao_dados():
     ##--------------
     ### NOME
     lista_geral = []
-    lista_geral.append(df['name'].values)
-    lista_nova = lista_geral[0]
-    lista_final_nomes = {
-        'lista':list(lista_nova)
-    }
+    try:
+        lista_geral.append(df['name'].values)
+        lista_nova = lista_geral[0]
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
+    except:
+        lista_nova = ['---']
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
     ##--------------
     ### location
     lista_primeiraopcao_location = df['geometry'].values
@@ -383,12 +401,18 @@ def quarta_opcao_dados():
     #df.to_excel('lista.xlsx')
     ##--------------
     ### NOME
-    lista_geral = []
-    lista_geral.append(df['name'].values)
-    lista_nova = lista_geral[0]
-    lista_final_nomes = {
-        'lista':list(lista_nova)
-    }
+    lista_geral = [] 
+    try:
+        lista_geral.append(df['name'].values)
+        lista_nova = lista_geral[0]
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
+    except:
+        lista_nova = ['---']
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
     ##--------------
     ### location
     lista_primeiraopcao_location = df['geometry'].values
@@ -482,11 +506,17 @@ def quinta_opcao_dados():
     ##--------------
     ### NOME
     lista_geral = []
-    lista_geral.append(df['name'].values)
-    lista_nova = lista_geral[0]
-    lista_final_nomes = {
-        'lista':list(lista_nova)
-    }
+    try:
+        lista_geral.append(df['name'].values)
+        lista_nova = lista_geral[0]
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
+    except:
+        lista_nova = ['---']
+        lista_final_nomes = {
+            'lista':list(lista_nova)
+        }
     ##--------------
     ### location
     lista_primeiraopcao_location = df['geometry'].values
