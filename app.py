@@ -142,10 +142,16 @@ def primeira_opcaao_dados(escolha):
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
     ### rating
-    lista_primeiraopcao_rating = df['rating'].values
-    dicio_lista_primeiraopcao_rating = {
-        'lista': list(lista_primeiraopcao_rating)
-    }    
+    try:
+        lista_primeiraopcao_rating = df['rating'].values
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }    
+    except:
+        lista_primeiraopcao_rating = ['---']
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }  
     #print(session['lista_primeiraopcao_rating'])
 
     #session['lista_final_nomes'] = lista_final_nomes
@@ -258,10 +264,16 @@ def segunda_opcao_dados(escolha):
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
     ### rating
-    lista_primeiraopcao_rating = df['rating'].values
-    dicio_lista_primeiraopcao_rating = {
-        'lista': list(lista_primeiraopcao_rating)
-    }    
+    try:
+        lista_primeiraopcao_rating = df['rating'].values
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }  
+    except:
+        lista_primeiraopcao_rating = ['---']
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }    
     #print(session['lista_primeiraopcao_rating'])
 
     #session['lista_final_nomes'] = lista_final_nomes
@@ -378,10 +390,16 @@ def terceira_opcao_dados(escolha):
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
     ### rating
-    lista_primeiraopcao_rating = df['rating'].values
-    dicio_lista_primeiraopcao_rating = {
-        'lista': list(lista_primeiraopcao_rating)
-    }    
+    try:
+        lista_primeiraopcao_rating = df['rating'].values
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }    
+    except:
+        lista_primeiraopcao_rating = ['---']
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }  
     #print(session['lista_primeiraopcao_rating'])
 
     #session['lista_final_nomes'] = lista_final_nomes
@@ -497,10 +515,16 @@ def quarta_opcao_dados(escolha):
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
     ### rating
-    lista_primeiraopcao_rating = df['rating'].values
-    dicio_lista_primeiraopcao_rating = {
-        'lista': list(lista_primeiraopcao_rating)
-    }    
+    try:
+        lista_primeiraopcao_rating = df['rating'].values
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }   
+    except:
+        lista_primeiraopcao_rating = ['---']
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }   
     #print(session['lista_primeiraopcao_rating'])
 
     #session['lista_final_nomes'] = lista_final_nomes
@@ -615,10 +639,16 @@ def quinta_opcao_dados(escolha):
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
     ### rating
-    lista_primeiraopcao_rating = df['rating'].values
-    dicio_lista_primeiraopcao_rating = {
-        'lista': list(lista_primeiraopcao_rating)
-    }    
+    try:
+        lista_primeiraopcao_rating = df['rating'].values
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        } 
+    except:
+        lista_primeiraopcao_rating = ['---']
+        dicio_lista_primeiraopcao_rating = {
+            'lista': list(lista_primeiraopcao_rating)
+        }     
     #print(session['lista_primeiraopcao_rating'])
 
     #session['lista_final_nomes'] = lista_final_nomes
