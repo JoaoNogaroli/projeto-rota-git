@@ -67,9 +67,8 @@ def teste():
     return redirect(url_for('pagina_dados'))
 
 
-def primeira_opcaao_dados():
-    escolha = session['escolha']
-
+def primeira_opcaao_dados(escolha):
+    
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -173,8 +172,7 @@ def primeira_opcaao_dados():
     }
     return lista_total
 
-def segunda_opcao_dados():
-    escolha = session['escolha']
+def segunda_opcao_dados(escolha):
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -279,8 +277,7 @@ def segunda_opcao_dados():
     }
     return lista_total
 
-def terceira_opcao_dados():
-    escolha = session['escolha']
+def terceira_opcao_dados(escolha):
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -383,8 +380,7 @@ def terceira_opcao_dados():
     }
     return lista_total
 
-def quarta_opcao_dados():
-    escolha = session['escolha']
+def quarta_opcao_dados(escolha):
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -488,8 +484,7 @@ def quarta_opcao_dados():
     }
     return lista_total
 
-def quinta_opcao_dados():
-    escolha = session['escolha']
+def quinta_opcao_dados(escolha):
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -610,13 +605,14 @@ def pagina_dados():
     # lista_escolhas.append(terceira)
     # lista_escolhas.append(quarta)
     # lista_escolhas.append(quinta)
-    lista_primeira_opcao = primeira_opcaao_dados()
+    escolha = session['escolha']
+    lista_primeira_opcao = primeira_opcaao_dados(escolha)
     time.sleep(0.4)
-    lista_segunda_opcao = segunda_opcao_dados()  
-    lista_terceira_opcao = terceira_opcao_dados()  
-    lista_quarta_opcao = quarta_opcao_dados()  
+    lista_segunda_opcao = segunda_opcao_dados(escolha)  
+    lista_terceira_opcao = terceira_opcao_dados(escolha)  
+    lista_quarta_opcao = quarta_opcao_dados(escolha)  
     time.sleep(0.1)
-    lista_quinta_opcao = quinta_opcao_dados()  
+    lista_quinta_opcao = quinta_opcao_dados(escolha)  
 
     session.pop('escolha',None)
 
