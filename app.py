@@ -124,10 +124,16 @@ def primeira_opcaao_dados(escolha):
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
-    lista_primeiraopcao_endereco = df['vicinity'].values
-    dicio_lista_primeiraopcao_endereco = {
-        'lista': list(lista_primeiraopcao_endereco)
-    }
+    try:
+        lista_primeiraopcao_endereco = df['vicinity'].values
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
+    except:
+        lista_primeiraopcao_endereco = ['---']
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
     #print(session['lista_primeiraopcao_endereco'])
     ##--------------
     ### fotos
@@ -236,10 +242,16 @@ def segunda_opcao_dados(escolha):
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
-    lista_primeiraopcao_endereco = df['vicinity'].values
-    dicio_lista_primeiraopcao_endereco = {
-        'lista': list(lista_primeiraopcao_endereco)
-    }
+    try:   
+        lista_primeiraopcao_endereco = df['vicinity'].values
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
+    except:
+        lista_primeiraopcao_endereco = ['---']
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
     #print(session['lista_primeiraopcao_endereco'])
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
@@ -350,10 +362,16 @@ def terceira_opcao_dados(escolha):
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
-    lista_primeiraopcao_endereco = df['vicinity'].values
-    dicio_lista_primeiraopcao_endereco = {
-        'lista': list(lista_primeiraopcao_endereco)
-    }
+    try:
+        lista_primeiraopcao_endereco = df['vicinity'].values
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
+    except:
+        lista_primeiraopcao_endereco = ['---']
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
     #print(session['lista_primeiraopcao_endereco'])
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
@@ -463,10 +481,16 @@ def quarta_opcao_dados(escolha):
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
-    lista_primeiraopcao_endereco = df['vicinity'].values
-    dicio_lista_primeiraopcao_endereco = {
-        'lista': list(lista_primeiraopcao_endereco)
-    }
+    try:
+        lista_primeiraopcao_endereco = df['vicinity'].values
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
+    except:
+        lista_primeiraopcao_endereco = ['---']
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
     #print(session['lista_primeiraopcao_endereco'])
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
@@ -575,10 +599,16 @@ def quinta_opcao_dados(escolha):
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
-    lista_primeiraopcao_endereco = df['vicinity'].values
-    dicio_lista_primeiraopcao_endereco = {
-        'lista': list(lista_primeiraopcao_endereco)
-    }
+    try:
+        lista_primeiraopcao_endereco = df['vicinity'].values
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
+    except:
+        lista_primeiraopcao_endereco = ['---']
+        dicio_lista_primeiraopcao_endereco = {
+            'lista': list(lista_primeiraopcao_endereco)
+        }
     #print(session['lista_primeiraopcao_endereco'])
     #print(session['lista_primeiraopcao_fotos'])
     ##--------------
