@@ -69,6 +69,7 @@ def teste():
 
 def primeira_opcaao_dados():
     escolha = session['escolha']
+
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -162,11 +163,12 @@ def primeira_opcaao_dados():
         final_primeiraopcao_fotos_dois.append(src)
 
     lista_total = {
-    'lista_primeiraopcao_nome':lista_final_nomes,
-    'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
-    'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
-    'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
-    'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
+        'nome':search_string,
+        'lista_primeiraopcao_nome':lista_final_nomes,
+        'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
+        'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
+        'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
+        'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
 
     }
     return lista_total
@@ -267,11 +269,12 @@ def segunda_opcao_dados():
         final_primeiraopcao_fotos_dois.append(src)
 
     lista_total = {
-    'lista_primeiraopcao_nome':lista_final_nomes,
-    'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
-    'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
-    'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
-    'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
+        'nome':search_string,
+        'lista_primeiraopcao_nome':lista_final_nomes,
+        'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
+        'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
+        'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
+        'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
 
     }
     return lista_total
@@ -370,11 +373,12 @@ def terceira_opcao_dados():
         src = 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png'
         final_primeiraopcao_fotos_dois.append(src)
     lista_total = {
-    'lista_primeiraopcao_nome':lista_final_nomes,
-    'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
-    'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
-    'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
-    'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
+        'nome':search_string,
+        'lista_primeiraopcao_nome':lista_final_nomes,
+        'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
+        'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
+        'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
+        'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
 
     }
     return lista_total
@@ -474,11 +478,12 @@ def quarta_opcao_dados():
         final_primeiraopcao_fotos_dois.append(src)
 
     lista_total = {
-    'lista_primeiraopcao_nome':lista_final_nomes,
-    'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
-    'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
-    'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
-    'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
+        'nome':search_string,
+        'lista_primeiraopcao_nome':lista_final_nomes,
+        'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
+        'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
+        'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
+        'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
 
     }
     return lista_total
@@ -577,11 +582,12 @@ def quinta_opcao_dados():
         src = 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png'
         final_primeiraopcao_fotos_dois.append(src)
     lista_total = {
-    'lista_primeiraopcao_nome':lista_final_nomes,
-    'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
-    'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
-    'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
-    'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
+        'nome':search_string,
+        'lista_primeiraopcao_nome':lista_final_nomes,
+        'lista_final_primeiraopcao_locaiton':lista_final_primeiraopcao_locaiton,
+        'lista_primeiraopcao_endereco':dicio_lista_primeiraopcao_endereco,
+        'lista_total_primeiraopcao_fotos':final_primeiraopcao_fotos_dois,
+        'lista_primeiraopcao_rating':dicio_lista_primeiraopcao_rating
 
     }
     return lista_total
@@ -593,17 +599,17 @@ def quinta_opcao_dados():
 @app.route('/pagina_dados')
 def pagina_dados():
     time.sleep(1.4)
-    primeira = session['escolha']['dado_um']
-    segunda = session['escolha']['dado_2']
-    terceira = session['escolha']['dado_3']
-    quarta = session['escolha']['dado_4']
-    quinta = session['escolha']['dado_5']
-    lista_escolhas = []
-    lista_escolhas.append(primeira)
-    lista_escolhas.append(segunda)
-    lista_escolhas.append(terceira)
-    lista_escolhas.append(quarta)
-    lista_escolhas.append(quinta)
+    # primeira = session['escolha']['dado_um']
+    # segunda = session['escolha']['dado_2']
+    # terceira = session['escolha']['dado_3']
+    # quarta = session['escolha']['dado_4']
+    # quinta = session['escolha']['dado_5']
+    # lista_escolhas = []
+    # lista_escolhas.append(primeira)
+    # lista_escolhas.append(segunda)
+    # lista_escolhas.append(terceira)
+    # lista_escolhas.append(quarta)
+    # lista_escolhas.append(quinta)
     lista_primeira_opcao = primeira_opcaao_dados()
     time.sleep(0.4)
     lista_segunda_opcao = segunda_opcao_dados()  
@@ -615,7 +621,7 @@ def pagina_dados():
     session.pop('escolha',None)
 
      
-    return render_template('pagina_dados.html',lista_escolhas=lista_escolhas,lista_primeira_opcao=lista_primeira_opcao,lista_segunda_opcao=lista_segunda_opcao,lista_terceira_opcao=lista_terceira_opcao,lista_quarta_opcao=lista_quarta_opcao,lista_quinta_opcao=lista_quinta_opcao, len=len)
+    return render_template('pagina_dados.html',lista_primeira_opcao=lista_primeira_opcao,lista_segunda_opcao=lista_segunda_opcao,lista_terceira_opcao=lista_terceira_opcao,lista_quarta_opcao=lista_quarta_opcao,lista_quinta_opcao=lista_quinta_opcao, len=len)
 
     
 
