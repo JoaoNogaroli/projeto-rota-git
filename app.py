@@ -17,9 +17,9 @@ app = Flask(__name__)
 API_KEY = 'AIzaSyDviKMu_KGmMJqsMKrioJUZ3jIjpVr9Q5M'
 map_client = googlemaps.Client(API_KEY)
 
-secret_key = secrets.token_hex(16)
+# secret_key = secrets.token_hex(32)
 # example output, secret_key = 000d88cd9d90036ebdd237eb6b0db000
-app.config['SECRET_KEY'] = secret_key
+app.config['SECRET_KEY'] = 'secret_key'
 
 global search_string
 
@@ -60,15 +60,16 @@ def teste():
         'dado_6_LAT':dado_6,
         'dado_7_LNG':dado_7,
     }
-    print(dicionario_escolha)
     session['escolha'] = dicionario_escolha
+    print(f"TESTE---começo{session['escolha']}")
 
     
     return redirect(url_for('pagina_dados'))
 
 
 def primeira_opcaao_dados(escolha):
-    
+    print('FUNCAO segunda_opcao_dados')
+
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -173,6 +174,7 @@ def primeira_opcaao_dados(escolha):
     return lista_total
 
 def segunda_opcao_dados(escolha):
+    print('FUNCAO segunda_opcao_dados')
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -278,6 +280,8 @@ def segunda_opcao_dados(escolha):
     return lista_total
 
 def terceira_opcao_dados(escolha):
+    print('FUNÇÂO terceira_opcao_dados')
+
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -381,6 +385,8 @@ def terceira_opcao_dados(escolha):
     return lista_total
 
 def quarta_opcao_dados(escolha):
+    print('FUNÇÂO quarta_opcao_dados')
+
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -485,6 +491,7 @@ def quarta_opcao_dados(escolha):
     return lista_total
 
 def quinta_opcao_dados(escolha):
+    print('FUNÇÂO QUINTA')
     lat = escolha['dado_6_LAT']
     lng = escolha['dado_7_LNG']
     location = (lat, lng)        
@@ -606,6 +613,7 @@ def pagina_dados():
     # lista_escolhas.append(quarta)
     # lista_escolhas.append(quinta)
     escolha = session['escolha']
+    print("PEGANDO ESCOLHA")
     lista_primeira_opcao = primeira_opcaao_dados(escolha)
     time.sleep(0.4)
     lista_segunda_opcao = segunda_opcao_dados(escolha)  
