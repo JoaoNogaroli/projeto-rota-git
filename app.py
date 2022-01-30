@@ -104,16 +104,23 @@ def primeira_opcaao_dados(escolha):
         }
     ##--------------
     ### location
-    lista_primeiraopcao_location = df['geometry'].values
-    lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
-    teste = json.loads(lista_primeiraopcao_location)
-    lista_final_primeiraopcao_locaiton = []
-    dicio_primeiraopcao_location = []
-    for item in teste:
-        dicio_primeiraopcao_location.append(item['location'])       
-    lista_final_primeiraopcao_locaiton= {
-        'lista':list(dicio_primeiraopcao_location)
-    }
+    try:
+        lista_primeiraopcao_location = df['geometry'].values
+        lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
+        teste = json.loads(lista_primeiraopcao_location)
+        lista_final_primeiraopcao_locaiton = []
+        dicio_primeiraopcao_location = []
+        for item in teste:
+            dicio_primeiraopcao_location.append(item['location'])       
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
+    except:
+        dicio_primeiraopcao_location = ['---']
+            
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
@@ -209,16 +216,23 @@ def segunda_opcao_dados(escolha):
         }
     ##--------------
     ### location
-    lista_primeiraopcao_location = df['geometry'].values
-    lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
-    teste = json.loads(lista_primeiraopcao_location)
-    lista_final_primeiraopcao_locaiton = []
-    dicio_primeiraopcao_location = []
-    for item in teste:
-        dicio_primeiraopcao_location.append(item['location'])       
-    lista_final_primeiraopcao_locaiton= {
-        'lista':list(dicio_primeiraopcao_location)
-    }
+    try:
+        lista_primeiraopcao_location = df['geometry'].values
+        lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
+        teste = json.loads(lista_primeiraopcao_location)
+        lista_final_primeiraopcao_locaiton = []
+        dicio_primeiraopcao_location = []
+        for item in teste:
+            dicio_primeiraopcao_location.append(item['location'])       
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
+    except:
+        dicio_primeiraopcao_location = ['---']
+            
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
@@ -316,16 +330,23 @@ def terceira_opcao_dados(escolha):
         }
     ##--------------
     ### location
-    lista_primeiraopcao_location = df['geometry'].values
-    lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
-    teste = json.loads(lista_primeiraopcao_location)
-    lista_final_primeiraopcao_locaiton = []
-    dicio_primeiraopcao_location = []
-    for item in teste:
-        dicio_primeiraopcao_location.append(item['location'])       
-    lista_final_primeiraopcao_locaiton= {
-        'lista':list(dicio_primeiraopcao_location)
-    }
+    try:
+        lista_primeiraopcao_location = df['geometry'].values
+        lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
+        teste = json.loads(lista_primeiraopcao_location)
+        lista_final_primeiraopcao_locaiton = []
+        dicio_primeiraopcao_location = []
+        for item in teste:
+            dicio_primeiraopcao_location.append(item['location'])       
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
+    except:
+        dicio_primeiraopcao_location = ['---']
+            
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
@@ -400,6 +421,7 @@ def quarta_opcao_dados(escolha):
         radius=distance,
     )
     df = pd.DataFrame(response_['results'])
+    
     try:
         df['photos'].fillna('...', inplace=True)
     except:
@@ -421,16 +443,23 @@ def quarta_opcao_dados(escolha):
         }
     ##--------------
     ### location
-    lista_primeiraopcao_location = df['geometry'].values
-    lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
-    teste = json.loads(lista_primeiraopcao_location)
-    lista_final_primeiraopcao_locaiton = []
-    dicio_primeiraopcao_location = []
-    for item in teste:
-        dicio_primeiraopcao_location.append(item['location'])       
-    lista_final_primeiraopcao_locaiton= {
-        'lista':list(dicio_primeiraopcao_location)
-    }
+    try:
+        lista_primeiraopcao_location = df['geometry'].values
+        lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
+        teste = json.loads(lista_primeiraopcao_location)
+        lista_final_primeiraopcao_locaiton = []
+        dicio_primeiraopcao_location = []
+        for item in teste:
+            dicio_primeiraopcao_location.append(item['location'])       
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
+    except:
+        dicio_primeiraopcao_location = ['---']
+            
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
@@ -526,16 +555,23 @@ def quinta_opcao_dados(escolha):
         }
     ##--------------
     ### location
-    lista_primeiraopcao_location = df['geometry'].values
-    lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
-    teste = json.loads(lista_primeiraopcao_location)
-    lista_final_primeiraopcao_locaiton = []
-    dicio_primeiraopcao_location = []
-    for item in teste:
-        dicio_primeiraopcao_location.append(item['location'])       
-    lista_final_primeiraopcao_locaiton= {
-        'lista':list(dicio_primeiraopcao_location)
-    }
+    try:
+        lista_primeiraopcao_location = df['geometry'].values
+        lista_primeiraopcao_location=json.dumps(list(lista_primeiraopcao_location))
+        teste = json.loads(lista_primeiraopcao_location)
+        lista_final_primeiraopcao_locaiton = []
+        dicio_primeiraopcao_location = []
+        for item in teste:
+            dicio_primeiraopcao_location.append(item['location'])       
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
+    except:
+        dicio_primeiraopcao_location = ['---']
+            
+        lista_final_primeiraopcao_locaiton= {
+            'lista':list(dicio_primeiraopcao_location)
+        }
     #print(session['lista_final_primeiraopcao_locaiton'])
     ##--------------
     ### endereco
